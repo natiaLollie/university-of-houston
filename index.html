@@ -46,7 +46,6 @@
       }
       .news-blurb{
       margin: 5% 2% 15% 2%;
-
       }
       #news-head{
         font-family:Archivo Narrow;
@@ -75,19 +74,81 @@
         border: solid 2px;
         color: #E61C3B;
       }
-      #row3{
-        background: gray;
-        height: 400px;
-        margin-bottom: 10%;
-        float: left;
-        width: 50%;
-      }
-      #row4{
-        background: pink;
-        height: 400px;
-        float: right;
-        width: 50%;
-      }
+
+/* Start Middle Row */
+    #left-col{
+      width: 50%;
+      height: 400px;
+      
+      float:left;
+    }
+    #right-col{
+      width: 50%;
+      height: 400px;
+      background: pink;
+      float:right;
+    }
+    #red-box{
+      position: relative;
+      background: #E61C3B;
+      max-width: 100%;
+      height: 400px;
+      padding: 10px;
+      margin-bottom: 8%;
+    }
+    .divider{
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      bottom: 10%;
+      border-left: 3px solid white;
+      border-radius: 80px;
+    }
+
+/* End Middle Row */
+
+
+.title{
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.subtitle{
+  color: #333333;
+  font-family: Archivo Narrow;
+  padding-left: 10px;
+  font-size: 40px;
+}
+.calendar{
+  padding-left: 8%;
+  padding-top: 40px;
+}
+.cal-space td{
+  padding-right: 50px;
+}
+.month{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Archivo Narrow;
+}
+.day{
+  text-align: 2px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+#red-box h3{
+  margin-top: 35px;
+  margin-left: 95px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+
+
       #social-icons{
         width: 100%;
         margin-bottom: 5%;
@@ -106,6 +167,22 @@
       span{
         line-height: 40px;
       }
+
+@media screen and (max-width: 600px) {
+    #left-col{
+    width: 100%;
+    }
+    #right-col{
+    width: 100%;
+    }
+    #red-box{
+      max-width: 100%;
+      height: 800px;
+    }
+    .divider{
+      display: none;
+    }
+}
 
     </style>
   </head>
@@ -140,12 +217,50 @@
         </div>
 
 
-        <div id="row3">
+        <div id="red-box">
+          <div id="left-col">
+            <table class="head">
+              <tr>
+                <td class="title">Get Involved</td>
+              </tr>
+              <tr>
+                <td class="subtitle">Alumni Events</td>
+              </tr>
+            </table>
 
-        </div>
-        <div id="row4">
+            <table class="calendar">
+              <tr class="cal-space">
+                <td class="month">Nov</td>
+                <td class="month">Nov</td>
+                <td class="month">Dec</td>
+                <td class="month">Dec</td>
+              </tr>
+              <tr>
+                <td class="day">01</td>
+                <td class="day">18</td>
+                <td class="day">04</td>
+                <td class="day">15</td>
+              </tr>
+            <table class="calendar">
+              <tr class="cal-space">
+                <td class="month">Jan</td>
+                <td class="month">Feb</td>
+                <td class="month">Mar</td>
+                <td class="month">Mar</td>
+              </tr>
+              <tr>
+                <td class="day">08</td>
+                <td class="day">20</td>
+                <td class="day">05</td>
+                <td class="day">13</td>
+              </tr>
+            </table>
+            </table>
+            <h3>View Events</h3>
+          </div>
 
-
+          <div class="divider"></div>
+          <div id="right-col"></div>
         </div>
 
 
